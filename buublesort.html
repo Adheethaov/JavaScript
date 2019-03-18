@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>bubble sort</title>
+</head>
+<body>
+	<center>
+	<div>
+		
+			<h1><u>Bubble Sort</u></h1>	
+		
+	</div>
+
+	<div>
+		<p id="demo"></p>
+
+		<button type="button" onclick="bubble()">Perform Bubblesort</button>
+	</div>
+
+	<hr>
+
+	<div>
+		<p id="first"></p>
+	</div>
+
+	<hr>
+
+	<script type="text/javascript">
+
+		var n;
+		n=prompt("Enter the size of the array");
+		num=parseInt(n);
+
+		a=new Array(num);
+		b=new Array(num);
+
+		for(var i=0;i<num;i++)
+		{
+			n=prompt("Enter the "+ (i+1) +"th element of array");
+			a[i]=parseInt(n);
+			b[i]=parseInt(n);
+
+		}
+		document.getElementById("demo").innerHTML=a;
+		
+		function bubble()
+		{
+		for(var i=0;i<num;i++)
+		{
+			for(var j=0;j<num-1;j++)
+			{
+				if(b[j]>b[j+1])
+				{
+					var temp=b[j];
+					b[j]=b[j+1];
+					b[j+1]=temp;
+				}
+			}
+		}
+		document.getElementById("first").innerHTML=b;
+		
+		}
+	</script>
+</center>
+</body>
+</html>

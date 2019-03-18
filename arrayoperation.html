@@ -1,0 +1,94 @@
+<html>
+<head>
+	<title>array operations</title>
+</head>
+<body>
+	<center>
+		<div>
+		<h1>
+			<u>Array Properties</u>
+		</h1>
+		</div>
+
+		<div>
+			<p id="demo"></p>
+		
+			<button type="button" onclick="setmax()"> Maximum </button>
+			<button type="button" onclick="setmin()">Minimum</button >
+			<button type="button" onclick="setavg()">Average</button>
+			<button type="button" onclick="setsum()">Sum</button>
+
+		</div>
+
+	<hr>
+
+		<div>
+			<p id="first"></p>
+		</div>	
+
+		<script type="text/javascript">
+
+			var n=prompt("Enter the array size");
+			var num=parseInt(n);
+			var a=new Array(num);
+			for(var i=0;i<num;i++)
+			{
+				n=prompt("Enter the "+ (i+1) +"th element in the array");
+				a[i]=parseInt(n);
+
+			}
+
+			document.getElementById("demo").innerHTML= a;
+
+			function setmax()
+			{
+				var max=0;
+				for(var i=0;i<num;i++)
+				{
+					if(a[i]>max)
+						max=a[i];
+				}
+
+				document.getElementById("first").innerHTML="The Maximum in the arry is " + max;
+			}
+
+			function setmin()
+			{
+				var min=99999999;
+				for(var i=0;i<num;i++)
+				{
+					if(a[i]<min)
+						min=a[i];
+				}
+				document.getElementById("first").innerHTML="The Minimum in the array is "+ min;
+
+			}
+			function setsum()
+			{
+				var s=0;
+				for(var i=0;i<num;i++)
+				{
+					s=s+a[i];
+
+				}
+
+				document.getElementById("first").innerHTML= "The sum of the given array elements is "+s;
+								
+							}
+				
+
+			function setavg()
+			{
+				var s=0;
+				for(var i=0;i<num;i++)
+				{
+					s=s+a[i];
+
+				}
+				var averg=s/num;
+				document.getElementById("first").innerHTML="The average of the given array elements is "+ averg;
+			}
+		</script>
+	</center>
+</body>
+</html>
